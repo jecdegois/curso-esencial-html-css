@@ -1,1 +1,24 @@
 /* critical css o critical path */
+/* Selectores combinados
+DESCENDENTE:
+body .title { este selecetor es especifico, lo que este dentro
+  de body que tenga la clase title, tendra los estilos
+}
+
+HIJO DIRECTO:
+body > .title { como indica el nombre
+  afecta a los elementos que sean hijos de body y
+  tengan la clase title
+}
+HERMANO :
+h1 ~ h2 {
+  se aplican estilos a los h2 que son hermanos del h1
+  no al h1
+}
+ADYACENTE:
+h1 + h2 {
+  Hace lo mismo q el hermano, pero con el elemento mas proximo
+
+}
+
+*/
