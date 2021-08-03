@@ -22,3 +22,10 @@ h1 + h2 {
 }
 
 */
+body {
+  /* FLOW Layout
+  */
+  writing-mode: horizontal-tb; /* horizontal de arriba hacia abajo */
+  direction: ltr; /* izquierda a derecha */
+
+}
