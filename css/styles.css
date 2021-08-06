@@ -29,6 +29,34 @@ h1 + h2 {
   direction: ltr;  izquierda a derecha
 
 } */
+@font-face
+{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face
+{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-italic.otf");
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face
+{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face
+{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-bold-italic.otf");
+  font-style: italic;
+  font-weight: bold;
+}
 :root
 {
   font-size: 18px;
@@ -39,6 +67,7 @@ h1 + h2 {
 body
 {
  color: var(--gray30);
+ font-family:charter ;
 
 }
 
