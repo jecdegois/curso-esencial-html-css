@@ -67,7 +67,8 @@ h1 + h2 {
 body
 {
  color: var(--gray30);
- font-family:charter ;
+ /* font-family: charter; */
+ font-family: 'Roboto', sans-serif;
 
 }
 
@@ -115,8 +116,49 @@ h3
   font-size: 1.5em;
 }
 
+pre
+{
+  background-color: #FEC62E;
+}
+
+.hero
+{
+  background-image:linear-gradient(to top, rgba(255,255,255, .3), transparent), url('../images/patron-1.png');
+  height: 350px;
+
+}
+h3
+{
+  counter-increment: titleList;
+}
+.section-content
+{
+  counter-reset: titleList;
+}
+.section-content h3::before
+{
+  content: counter(titleList, decimal)".";
+
+}
+.section-content h3::after
+{
+  content: "";
+  width: 32px;
+  height: 4px;
+  background-color: var(--gray30);
+  display: inline-block;
+}
+
+
+/* ::selection
+{
+  background-color: #e62e6f;
+} */
+
 /* PSEUDO CLASES
 Son estados particulares
 que pueden tener elementos que ya tenemos
+PSEUDO ELEMENTOS
+Son elementos que se crean a partir de otros
 */
 
