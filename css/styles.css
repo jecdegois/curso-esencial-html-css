@@ -29,6 +29,10 @@ h1 + h2 {
   direction: ltr;  izquierda a derecha
 
 } */
+:root
+{
+  font-size: 18px;
+}
 
 body
 {
@@ -48,6 +52,25 @@ h1
 header
 {
   font-size:14px ;
+  color: #616161;
+}
+header a
+{
+  color: #616161;
+  text-decoration: none;
+}
+header a:hover
+{
+  color: #212121
+}
+nav details summary
+{
+  font-weight: bold;
+}
+
+nav details summary:hover
+{
+  cursor: pointer;
 }
 
 h2
@@ -59,4 +82,9 @@ h3
 {
   font-size: 1.5em;
 }
+
+/* PSEUDO CLASES
+Son estados particulares
+que pueden tener elementos que ya tenemos
+*/
 
