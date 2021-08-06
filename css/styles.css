@@ -22,10 +22,41 @@ h1 + h2 {
 }
 
 */
-body {
-  /* FLOW Layout
-  */
-  writing-mode: horizontal-tb; /* horizontal de arriba hacia abajo */
-  direction: ltr; /* izquierda a derecha */
+/* body {
+   FLOW Layout
+
+  writing-mode: horizontal-tb;  horizontal de arriba hacia abajo
+  direction: ltr;  izquierda a derecha
+
+} */
+
+body
+{
+ color: #212121;
 
 }
+
+a
+{
+  color: #212121;
+}
+
+h1
+{
+  font-size: 60px;
+}
+header
+{
+  font-size:14px ;
+}
+
+h2
+{
+  font-size: 2em;
+}
+
+h3
+{
+  font-size: 1.5em;
+}
+
