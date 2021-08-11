@@ -29,126 +29,110 @@ h1 + h2 {
   direction: ltr;  izquierda a derecha
 
 } */
-@font-face
-{
+@font-face {
   font-family: charter;
   src: url("../fonts/fonts/charter-regular.otf");
   font-style: normal;
   font-weight: 400;
 }
-@font-face
-{
+@font-face {
   font-family: charter;
   src: url("../fonts/fonts/charter-italic.otf");
   font-style: italic;
   font-weight: 400;
 }
-@font-face
-{
+@font-face {
   font-family: charter;
   src: url("../fonts/fonts/charter-bold.otf");
   font-style: normal;
   font-weight: 700;
 }
-@font-face
-{
+@font-face {
   font-family: charter;
   src: url("../fonts/fonts/charter-bold-italic.otf");
   font-style: italic;
   font-weight: bold;
 }
-:root
-{
+:root {
   font-size: 18px;
   --gray30: #212121;
   --gray20: #212429;
   --gray10: #616161;
 }
-body
-{
- color: var(--gray30);
- /* font-family: charter; */
- font-family: 'Roboto', sans-serif;
-
+body {
+  color: var(--gray30);
+  /* font-family: charter; */
+  font-family: "Roboto", sans-serif;
 }
 
-a
-{
-  color:var(--gray30);
+a {
+  color: var(--gray30);
 }
 
-h1
-{
+h1 {
   font-size: 60px;
+  text-align: center;
 }
-header
-{
+header {
   /* --gray10: red; */
-  font-size:14px ;
+  font-size: 14px;
   color: var(--gray10);
 }
-header a
-{
+header a {
   color: var(--gray10);
   text-decoration: none;
 }
-header a:hover
-{
+header a:hover {
   color: var(--gray);
 }
-nav details summary
-{
+nav details summary {
   font-weight: bold;
 }
 
-nav details summary:hover
-{
+nav details summary:hover {
   cursor: pointer;
 }
 
-h2
-{
+h2 {
   font-size: 2em;
 }
 
-h3
-{
+h3 {
   font-size: 1.5em;
 }
 
-pre
-{
-  background-color: #FEC62E;
+pre {
+  background-color: #fec62e;
 }
 
-.hero
-{
-  background-image:linear-gradient(to top, rgba(255,255,255, .3), transparent), url('../images/patron-1.png');
+.hero {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron-1.png");
   height: 350px;
+}
 
+.section-content h3 {
+  counter-increment: listaDeTitulo;
 }
-h3
-{
-  counter-increment: titleList;
+.section-content {
+  counter-reset: listaDeTitulo;
 }
-.section-content
-{
-  counter-reset: titleList;
+.section-content h3::before {
+  content: counter(
+      listaDeTitulo,
+      decimal /* Por defecto esta en decimal, pero se puede cambiar*/ )".";
 }
-.section-content h3::before
-{
-  content: counter(titleList, decimal)".";
-
-}
-.section-content h3::after
-{
+.section-content h3::after {
   content: "";
   width: 32px;
   height: 4px;
   background-color: var(--gray30);
   display: inline-block;
 }
-
 
 /* ::selection
 {
@@ -161,4 +145,3 @@ que pueden tener elementos que ya tenemos
 PSEUDO ELEMENTOS
 Son elementos que se crean a partir de otros
 */
-
