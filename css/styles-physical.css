@@ -1,0 +1,186 @@
+/* critical css o critical path */
+/* Selectores combinados
+DESCENDENTE:
+body .title { este selecetor es especifico, lo que este dentro
+  de body que tenga la clase title, tendra los estilos
+}
+
+HIJO DIRECTO:
+body > .title { como indica el nombre
+  afecta a los elementos que sean hijos de body y
+  tengan la clase title
+}
+HERMANO :
+h1 ~ h2 {
+  se aplican estilos a los h2 que son hermanos del h1
+  no al h1
+}
+ADYACENTE:
+h1 + h2 {
+  Hace lo mismo q el hermano, pero con el elemento mas proximo
+
+}
+
+*/
+/* body {
+   FLOW Layout
+
+  writing-mode: horizontal-tb;  horizontal de arriba hacia abajo
+  direction: ltr;  izquierda a derecha
+
+} */
+@font-face {
+  font-family: charter;
+  src: url("../fonts/fonts/charter-regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/fonts/charter-italic.otf");
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/fonts/charter-bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: charter;
+  src: url("../fonts/fonts/charter-bold-italic.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+:root {
+  font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+body {
+  color: var(--gray30);
+  /* font-family: charter; */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+a {
+  color: var(--gray30);
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  /*   margin: top right bottom left; */
+}
+h1 ~ p {
+  margin-bottom: 64px;
+}
+hr {
+  margin: 64px 0;
+}
+header {
+  /* --gray10: red; */
+  font-size: 14px;
+  color: var(--gray10);
+}
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--gray);
+}
+nav details summary {
+  font-weight: bold;
+}
+
+nav details summary:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 64px 0 40px;
+
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
+
+pre {
+  background-color: #fec62e;
+}
+blockquote {
+  margin: 32px 0;
+}
+
+.hero {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron-1.png");
+  height: 350px;
+}
+.section-content {
+  margin-top: 164px;
+}
+.section-content:first-of-type {
+  margin: 0;
+}
+.section-content ol li {
+  line-height: 24px;
+}
+.section-content ul li {
+  margin-bottom: 16px;
+}
+.section-content + hr {
+  display: none;
+}
+.section-content img {
+  margin-top: 40px;
+}
+
+.section-content h3 {
+  counter-increment: listaDeTitulo;
+}
+.section-content {
+  counter-reset: listaDeTitulo;
+}
+.section-content h3::before {
+  content: counter(
+      listaDeTitulo,
+      decimal /* Por defecto esta en decimal, pero se puede cambiar*/
+    )
+    ".";
+}
+.section-content h3::after {
+  content: "";
+  width: 32px;
+  height: 4px;
+  background-color: var(--gray30);
+  display: inline-block;
+}
+
+/* ::selection
+{
+  background-color: #e62e6f;
+} */
+
+/* PSEUDO CLASES
+Son estados particulares
+que pueden tener elementos que ya tenemos
+PSEUDO ELEMENTOS
+Son elementos que se crean a partir de otros
+*/
